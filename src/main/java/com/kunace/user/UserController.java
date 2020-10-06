@@ -28,4 +28,19 @@ public class UserController {
         userService.addUser(user);
     }
 
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello!";
+    }
+
+    @GetMapping("/testUser")
+    public User testUser() {
+        User testUser = new User();
+        testUser.setGender("testGender");
+        testUser.setEmail("testUser@default.com");
+        testUser.setUsername("testUsername");
+        testUser.setRealname("testRealname");
+        testUser.setPassword("testPassword");
+        return testUser;
+    }
 }
